@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def whatismyaddress():
-    return request.remote_addr
+    return request.access_route[0]
 
 if __name__ == '__main__':
     app.run()
